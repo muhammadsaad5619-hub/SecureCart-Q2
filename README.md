@@ -77,12 +77,6 @@ sudo cp safe/*      /var/www/html/securecart/safe/
 sudo chown -R www-data:www-data /var/www/html/securecart
 ```
 
-Open in a browser:
-
-- Vulnerable: http://localhost/securecart/vulnerable/login.php
-- Safe:       http://localhost/securecart/safe/login.php
-
----
 
 ## 4. Vulnerability Demonstrations (Vulnerable version)
 
