@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Prize Giveaway - Click to Claim!</title>
+</head>
+<body>
+    <h1>Congratulations! You've won a free gift card!</h1>
+    <p>Click below to claim your reward.</p>
+
+    <!-- CSRF test against the SAFE profile endpoint.
+         This should be BLOCKED: profile.php (safe) requires a valid
+         per-session CSRF token, which this external page cannot supply. -->
+    <form id="csrf-form" action="http://localhost/securecart/safe/profile.php" method="POST">
+        <input type="hidden" name="new_email" value="attacker@evil.com">
+    </form>
+
+    <script>
+        document.getElementById('csrf-form').submit();
+    </script>
+</body>
+</html>
