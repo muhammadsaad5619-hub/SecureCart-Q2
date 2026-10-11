@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0;
+}
+.banner {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.nav {
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.nav a {
+    color: #2980b9;
+    text-decoration: none;
+    margin-right: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover {
+    background: #21618c;
+}
+.error {
+    background: #fdecea;
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.success {
+    background: #eafaf1;
+    color: #27ae60;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.reflected {
+    background: #fff9e6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.hint {
+    color: #888;
+    font-size: 13px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+}
+.product-card .price {
+    font-weight: bold;
+    color: #27ae60;
+}
+.reviews {
+    margin-top: 15px;
+}
+.review {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+}
+#welcome-banner {
+    background: #d6eaf8;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+#welcome-banner:empty {
+    display: none;
+}
